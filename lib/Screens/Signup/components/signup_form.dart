@@ -5,9 +5,13 @@ import '../../../constants.dart';
 import '../../Login/login_screen.dart';
 
 class SignUpForm extends StatelessWidget {
-  const SignUpForm({
+  SignUpForm({
     Key? key,
   }) : super(key: key);
+
+  TextEditingController emailTextController = TextEditingController();
+  TextEditingController passwordTextController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +19,7 @@ class SignUpForm extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
+            controller: emailTextController,
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
             cursorColor: kPrimaryColor,
@@ -30,6 +35,7 @@ class SignUpForm extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
+              controller: passwordTextController,
               textInputAction: TextInputAction.done,
               obscureText: true,
               cursorColor: kPrimaryColor,
@@ -44,7 +50,12 @@ class SignUpForm extends StatelessWidget {
           ),
           const SizedBox(height: defaultPadding / 2),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              print(emailTextController.text);
+              print(passwordTextController.text);
+
+
+            },
             child: Text("kayıt ol".toUpperCase()),
           ),
           const SizedBox(height: defaultPadding),

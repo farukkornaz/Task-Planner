@@ -58,6 +58,7 @@ class LoginForm extends StatelessWidget {
               "Giriş Yap".toUpperCase(),
             ),
           ),
+
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
             press: () {
