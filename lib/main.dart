@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'Screens/Welcome/welcome_screen.dart';
 import 'constants.dart';
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print(MediaQuery.of(context).size.width);
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Task Planner',
       theme: ThemeData(
@@ -38,7 +39,6 @@ class MyApp extends StatelessWidget {
               horizontal: defaultPadding, vertical: defaultPadding),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(30)),
-            borderSide: BorderSide(strokeAlign: 5, color: Colors.black87),
           ),
         ),
       ),

@@ -12,6 +12,12 @@ class SignUpForm extends StatelessWidget {
   TextEditingController emailTextController = TextEditingController();
   TextEditingController passwordTextController = TextEditingController();
 
+  @override
+  void dispose() {
+    emailTextController.dispose();
+    passwordTextController.dispose();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -53,8 +59,6 @@ class SignUpForm extends StatelessWidget {
             onPressed: () {
               print(emailTextController.text);
               print(passwordTextController.text);
-
-
             },
             child: Text("kayıt ol".toUpperCase()),
           ),
