@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../constants.dart';
 
 class LoginScreenTopImage extends StatelessWidget {
-  const LoginScreenTopImage({
+  const                             LoginScreenTopImage({
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +22,10 @@ class LoginScreenTopImage extends StatelessWidget {
             const Spacer(),
             Expanded(
               flex: 8,
-              child: SvgPicture.asset("assets/icons/login.svg"),
+              child: Image.asset(
+                width: 256,
+                  height: 256,
+                  "assets/icons/login.png"),
             ),
             const Spacer(),
           ],
